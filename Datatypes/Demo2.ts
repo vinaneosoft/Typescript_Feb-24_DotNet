@@ -10,7 +10,11 @@ salary="fifty six thousand";
 
 let empName;
 empName="anand";
+console.log(typeof empName);
+
 empName=56788;
+console.log(typeof empName);
+
 
 let age=45; // number
 //age="fourty five"
