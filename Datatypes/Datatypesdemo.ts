@@ -9,8 +9,8 @@
 
 let empId:number;  // : type annotation
 empId=7890;
-
 console.log(empId);
+
 document.write("<b>"+empId+"</b>");
 let bNode=document.createElement("b");
 bNode.textContent=empId+""
