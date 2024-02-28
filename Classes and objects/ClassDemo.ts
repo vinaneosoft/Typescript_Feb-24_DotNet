@@ -11,7 +11,6 @@ class BankAccount{
     customerName:string;
     accountBalance: number;
     accountType:string  // public
-   
     deposit(deptAmt:number):number{
         console.log("in method.................");
         console.log(this);
@@ -45,15 +44,22 @@ console.log(account1);
 
 let account2=new BankAccount();  // object : instance of class
 account2.accountBalance=6000;  // instance variable
-account2.accountType="salary";
 account2.accountType="savings";
 account2.accountBalance=1000;
 account2.customerId=9999;
 account2.customerName="poonam"
 account2.accountNumber=12121212;
-console.log("after deposit in account1:  "+account1.deposit(56000));  // instance methods
 
+console.log("after deposit in account1:  "+account1.deposit(56000));  // instance methods
 console.log("after deposit in account2:  "+account2.deposit(45000));
 
 console.log(account1==account2);
 console.log(account1===account2);
+
+let accountref=account1;
+// it will create new account? or it will refer existing account
+// it will refer to existing account
+console.log(account1==accountref);
+console.log(account1===accountref);
+
+// please implement the same for class student 
