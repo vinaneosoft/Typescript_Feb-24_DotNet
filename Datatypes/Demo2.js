@@ -20,3 +20,10 @@ console.log(empName);
 console.log(age);
 /*if u want to test output from converted file (js)  at backend
 u can execute it on node*/
+/** type assertion */
+var cityName; // any
+cityName = "Mumbai";
+// as type is any intellisense (AI) wont work : soln : type asserion
+var cn = cityName;
+console.log(cn.length);
+console.log(cityName.charAt(0));
