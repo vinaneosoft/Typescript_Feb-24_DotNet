@@ -75,3 +75,6 @@ console.log(`account ${bankAccount1.accountNumber}
             is of ${bankAccount1.customer.custId}, ${bankAccount1.customer.custName}
             with contact ${bankAccount1.customer.custContact}
              `);
+
+
+console.log(`type of account is : ${bankAccount1.accountType}`);
