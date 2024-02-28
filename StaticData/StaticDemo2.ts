@@ -7,14 +7,14 @@ class SCBankAccount{
     accountBalance: number;
     accountType:string;
     static bankName:string;
-    static count:number=0;
+    static count:number;
     static{
+        console.log("STATIC BLOCK called only 1nce");
        this.count=0;
     }
     constructor(){
-        console.log("IN CONSTRUCTOR"); 
+        console.log("IN CONSTRUCTOR called everytime when object gets created"); 
         SCBankAccount.count++;
-        
     }
     deposit(deptAmt:number):number{
         this.accountBalance=this.accountBalance+deptAmt; 

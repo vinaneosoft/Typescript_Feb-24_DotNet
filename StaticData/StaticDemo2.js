@@ -22,6 +22,7 @@ var SCBankAccount = /** @class */ (function () {
     _a = SCBankAccount;
     SCBankAccount.count = 0;
     (function () {
+        console.log("STATIC BLOCK");
         _a.count = 0;
     })();
     return SCBankAccount;

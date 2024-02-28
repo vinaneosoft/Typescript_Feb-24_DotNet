@@ -1,0 +1,7 @@
+Implement StudentMarks class 
+having id, name, standard, marks array
+assume marks out of 100
+declare methods to 1. show all marks sum, 2. calculate average of all marks 3. calculate percentage 
+4. to assign grade to student. if percentage >= 70 then "Firstclass with distinction" else "PASS"
+
+create multiple objects of students and call difft instance methods
