@@ -11,6 +11,7 @@ console.log(typeof empName);
 empName = 56788;
 console.log(typeof empName);
 var age = 45; // number
+console.log("type of age:" + (typeof age));
 //age="fourty five"
 console.log(companyName);
 console.log(marriedStatus);

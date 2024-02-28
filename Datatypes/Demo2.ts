@@ -1,6 +1,7 @@
 let companyName:string;
 companyName="Neosoft";
 
+
 let marriedStatus:boolean
 marriedStatus=true;
 
@@ -17,6 +18,8 @@ console.log(typeof empName);
 
 
 let age=45; // number
+console.log("type of age:"+(typeof age));
+
 //age="fourty five"
 
 console.log(companyName);
@@ -28,4 +31,12 @@ console.log(age);
 /*if u want to test output from converted file (js)  at backend
 u can execute it on node*/
 
+/** type assertion */
 
+let cityName; // any
+
+cityName="Mumbai";
+// as type is any intellisense (AI) wont work : soln : type asserion
+let cn=<string>cityName
+console.log(cn.length);
+console.log((<string>cityName).charAt(0));
