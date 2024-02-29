@@ -100,3 +100,9 @@ function callEat(ani) {
         console.log("Goat came here");
     ani.eat();
 }
+var tiger3;
+//tiger3=new Goat();
+var goat3;
+goat3 = new Tiger();
+goat3.eat();
+console.log(goat3 instanceof Goat);
