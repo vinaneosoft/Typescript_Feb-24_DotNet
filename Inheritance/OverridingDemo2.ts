@@ -2,9 +2,8 @@ class Animal{
      eat():void{
         console.log("Animals Eat");
     }
-
-    getEmployee():Employee{
-        return new Employee();
+    getFood():Food{
+        return new Food();
     }
 }
 class Tiger extends Animal{
@@ -12,13 +11,11 @@ class Tiger extends Animal{
         console.log("Tiger Eat other animals");
         return 0;
     }
-
     private sleep(){
 
     }
-
-    getEmployee(): Trainer {
-        return new Trainer();
+    getFood(): NonvegFood {
+        return new NonvegFood();
     }
 }
 class Goat extends Animal{
@@ -26,8 +23,22 @@ class Goat extends Animal{
         console.log("Goat Eat grass and other veg"); 
        
     }
+    getFood(): VegFood {
+        return new VegFood();
+    }
 }
 
+
+class Food{
+
+}
+class NonvegFood extends Food{
+
+}
+
+class VegFood extends Food{
+
+}
 let animal=new Animal();
 let tiger=new Tiger();
 let goat=new Goat();
