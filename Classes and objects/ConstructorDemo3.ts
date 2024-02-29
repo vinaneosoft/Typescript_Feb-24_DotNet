@@ -4,7 +4,7 @@ class BankAccount{
     public customerName:string;
     accountBalance: number;
     accountType:string
-    constructor(accNum:number, customerId:number, custName:string, balance:number, accType:string){
+    constructor(custName="AAA", accNum=0, customerId=0,  balance=0, accType="savings"){
         console.log("in p-constructor....");   
         this.accountBalance=balance; 
         this.accountNumber=accNum;
@@ -24,8 +24,11 @@ class BankAccount{
         return this.accountBalance;
     }
 }
-let account1=new BankAccount(9090909090,1111,"Parvin",2000,'salary'); // call p constr
-let account2=new BankAccount(7878787878,2222,"Rupali",1000,'salary'); 
-let account3=new BankAccount(4545454545,1010,"Kiran",2000,"savings");
-let account4=new BankAccount(4545454545,1010,"Kiran",2000,"savings");
+let account1=new BankAccount("Parvin",9090909090,1111,2000,'salary'); // call p constr
+let account2=new BankAccount("Rupali",7878787878,2222,1000); 
+let account3=new BankAccount("Kiran",4545454545,1010,);
+let account4=new BankAccount("Pooja",4545454545);
+let account5=new BankAccount();
+let account6=new BankAccount("Vina");
 console.log(account1);console.log(account2);console.log(account3);
+console.log(account4);console.log(account5);console.log(account6);
