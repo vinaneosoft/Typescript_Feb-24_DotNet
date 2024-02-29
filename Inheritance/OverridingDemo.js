@@ -28,13 +28,6 @@ var Employee = /** @class */ (function () {
     };
     return Employee;
 }());
-var employee1 = new Employee();
-console.log(employee1);
-employee1.employeeId = 5678;
-employee1.employeeName = "Poonam Patil";
-employee1.basicSalary = 56000;
-console.log(employee1);
-console.log("Employee Gross Salary" + employee1.getGrossSalary());
 // protected members of super class are accessible only inside body of itself and subclasses
 var Trainer = /** @class */ (function (_super) {
     __extends(Trainer, _super);
@@ -64,6 +57,13 @@ var Trainer = /** @class */ (function (_super) {
     };
     return Trainer;
 }(Employee));
+var employee1 = new Employee();
+console.log(employee1);
+employee1.employeeId = 5678;
+employee1.employeeName = "Poonam Patil";
+employee1.basicSalary = 56000;
+console.log(employee1);
+console.log("Employee Gross Salary" + employee1.getGrossSalary());
 var trainer1 = new Trainer();
 trainer1.trainingTechnologies = ['HTML', 'CSS', 'JS', 'Bootstrap', 'JAVA', 'SASS'];
 trainer1.employeeId = 1111;
@@ -73,6 +73,6 @@ trainer1.empExperience = 2;
 trainer1.monthlyHrs = 30;
 trainer1.trainingExperience = 10;
 console.log(trainer1);
-console.log("Trainer Gross Salary:" + trainer1.getGrossSalary()); // inherited overriden method
+console.log("Trainer Gross Salary:" + trainer1.getGrossSalary()); // inherited overriding method
 //console.log("Trainer Gross Salary:"+trainer1.getTrainerGrossSalary()); // with extra Pay
 console.log(trainer1.getTotalExp());
