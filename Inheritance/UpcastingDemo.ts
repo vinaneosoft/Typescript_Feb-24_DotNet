@@ -48,7 +48,6 @@ goat.eat(); //run time polymorphism
 // if super class method returing object then in subclass o method, covariant is allowed
 let goat2:Goat;
 goat2=new Goat();
-// UPCASTING
 let animal2:Animal;
 animal2=new Tiger();
 animal2.eat(); // inherited overriding method
