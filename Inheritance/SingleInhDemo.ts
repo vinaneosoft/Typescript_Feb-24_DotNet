@@ -9,7 +9,6 @@ class Employee{
         return this.basicSalary+(0.05*this.basicSalary)+(0.1*this.basicSalary)+(0.15* this.basicSalary)
     }
 }
-
 let employee1=new Employee();
 console.log(employee1);
 employee1.employeeId=5678;
@@ -21,13 +20,10 @@ console.log(employee1.getGrossSalary());
 class Trainer extends Employee{
      trainingTechnologies:string[]=[];
      trainingExperience=0;
-   
      getTotalExp(){
         return this.empExperience+this.trainingExperience;
      }
-     
 }
-
 let trainer1=new Trainer();
 trainer1.trainingTechnologies=['HTML','CSS','JS','Bootstrap','JAVA','SASS'];
 trainer1.employeeId=1111;
