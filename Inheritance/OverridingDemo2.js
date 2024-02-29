@@ -29,11 +29,11 @@ var Tiger = /** @class */ (function (_super) {
     function Tiger() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    Tiger.prototype.sleep = function () {
+    };
     Tiger.prototype.eat = function () {
         console.log("Tiger Eat other animals");
         return 0;
-    };
-    Tiger.prototype.sleep = function () {
     };
     Tiger.prototype.getFood = function () {
         return new NonvegFood();
@@ -85,6 +85,7 @@ goat.eat(); //run time polymorphism
 // if super class method returing object then in subclass o method, covariant is allowed
 var goat2;
 goat2 = new Goat();
+// UPCASTING
 var animal2;
 animal2 = new Tiger();
 animal2.eat(); // inherited overriding method
@@ -93,16 +94,11 @@ animal2.eat(); // inherited overriding method
 callEat(goat);
 callEat(tiger);
 function callEat(ani) {
-    console.log(typeof ani);
+    console.log("-----in function");
     if (ani instanceof Tiger)
         console.log("Tiger came here");
     else if (ani instanceof Goat)
         console.log("Goat came here");
-    ani.eat();
+    ani.eat(); // common method is not getting called
+    console.log("-----end function");
 }
-var tiger3;
-//tiger3=new Goat();
-var goat3;
-goat3 = new Tiger();
-goat3.eat();
-console.log(goat3 instanceof Goat);

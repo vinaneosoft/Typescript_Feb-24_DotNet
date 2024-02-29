@@ -9,18 +9,18 @@ class Animal{
 }
 class Tiger extends Animal{
      tigerName:string
+     sleep(){
+    }
      eat():number{
         console.log("Tiger Eat other animals");
         return 0;
-    }
-     sleep(){
     }
     getFood(): NonvegFood {
         return new NonvegFood();
     }
 }
 class Goat extends Animal{
-    goatHome:string;
+    goatHome:string
     eat():void{
         console.log("Goat Eat grass and other veg"); 
     }
@@ -57,11 +57,12 @@ animal2.eat();  // inherited overriding method
 callEat(goat);
 callEat(tiger);
 function callEat(ani:Animal){
-    console.log(typeof ani); 
+    console.log("-----in function");
     if(ani instanceof Tiger)
         console.log("Tiger came here");
     else if(ani instanceof Goat)
         console.log("Goat came here");
-    ani.eat();
+    ani.eat(); // common method is not getting called
+    console.log("-----end function");
 }
 
