@@ -1,0 +1,8 @@
+Implement BankAccount having instance variables like, customer name, balance, type, account number and customer id.
+Accountnumber and Customer Id  must be autoincremented
+Initial value for account number must be 1000
+Initial value for customer id must be 1
+
+Display 5 accounts with all account details
+Display Account number of 4th Account
+Display Customer Id of 5th Account
