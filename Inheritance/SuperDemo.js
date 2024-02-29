@@ -14,11 +14,16 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 var Employee = /** @class */ (function () {
-    function Employee() {
-        this.employeeId = 0;
-        this.employeeName = "AAA";
-        this.basicSalary = 0;
-        this.empExperience = 0;
+    function Employee(employeeId, employeeName, basicSalary, empExperience) {
+        if (employeeId === void 0) { employeeId = 0; }
+        if (employeeName === void 0) { employeeName = "AAA"; }
+        if (basicSalary === void 0) { basicSalary = 0; }
+        if (empExperience === void 0) { empExperience = 0; }
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.basicSalary = basicSalary;
+        this.empExperience = empExperience;
+        console.log("in EMP contr");
     }
     Employee.prototype.getGrossSalary = function () {
         console.log("in superclass method");
@@ -30,11 +35,19 @@ var Employee = /** @class */ (function () {
 }());
 var Trainer = /** @class */ (function (_super) {
     __extends(Trainer, _super);
-    function Trainer() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.trainingTechnologies = [];
-        _this.trainingExperience = 0;
-        _this.monthlyHrs = 0;
+    function Trainer(empId, empName, empSalary, exp, trainingTechnologies, trainingExperience, monthlyHrs) {
+        if (empId === void 0) { empId = 0; }
+        if (empName === void 0) { empName = "AAA"; }
+        if (empSalary === void 0) { empSalary = 0; }
+        if (exp === void 0) { exp = 0; }
+        if (trainingTechnologies === void 0) { trainingTechnologies = []; }
+        if (trainingExperience === void 0) { trainingExperience = 0; }
+        if (monthlyHrs === void 0) { monthlyHrs = 0; }
+        var _this = _super.call(this, empId, empName, empSalary, exp) || this; // calling super class constructor 
+        _this.trainingTechnologies = trainingTechnologies;
+        _this.trainingExperience = trainingExperience;
+        _this.monthlyHrs = monthlyHrs;
+        console.log("in Trainer contr");
         return _this;
     }
     Trainer.prototype.getTotalExp = function () {
@@ -50,58 +63,14 @@ var Trainer = /** @class */ (function (_super) {
     };
     return Trainer;
 }(Employee));
-var employee1 = new Employee();
-console.log(employee1);
-employee1.employeeId = 5678;
-employee1.employeeName = "Poonam Patil";
-employee1.basicSalary = 56000;
+var employee1 = new Employee(5678, "Poonam Patil", 56000, 2);
 console.log(employee1);
 console.log("Employee Gross Salary" + employee1.getGrossSalary());
-var trainer1 = new Trainer();
-trainer1.trainingTechnologies = ['HTML', 'CSS', 'JS', 'Bootstrap', 'JAVA', 'SASS'];
-trainer1.employeeId = 1111;
-trainer1.employeeName = "Priya Khande";
-trainer1.basicSalary = 56000;
-trainer1.empExperience = 2;
-trainer1.monthlyHrs = 30;
-trainer1.trainingExperience = 10;
+// calling sequence of constru in inh : from superclass cntr to sub contr
+var trainer1 = new Trainer(111, "Komal", 45000, 2, ['HTML', 'CSS', 'JS', 'Bootstrap', 'JAVA', 'SASS'], 10, 30);
 console.log(trainer1);
+var trainer2 = new Trainer(222, "Pravin", 34000, 2, ['PYTHON', 'CSS', 'JS', 'Bootstrap', 'JAVA', 'SASS'], 12, 20);
+console.log(trainer2);
 console.log("Trainer Gross Salary:" + trainer1.getGrossSalary()); // inherited overriding method
 //console.log("Trainer Gross Salary:"+trainer1.getTrainerGrossSalary()); // with extra Pay
 console.log(trainer1.getTotalExp());
-var A = /** @class */ (function () {
-    function A() {
-    }
-    A.prototype.test1 = function () {
-        console.log("IN A");
-    };
-    A.prototype.amethod = function () {
-        console.log("in another A method");
-    };
-    return A;
-}());
-var B = /** @class */ (function (_super) {
-    __extends(B, _super);
-    function B() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    B.prototype.test1 = function () {
-        console.log("IN B");
-        _super.prototype.test1.call(this);
-    };
-    B.prototype.bmethod = function () {
-    };
-    return B;
-}(A));
-var C = /** @class */ (function (_super) {
-    __extends(C, _super);
-    function C() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    C.prototype.test1 = function () {
-        _super.prototype.test1.call(this); // call to B's test1();
-        _super.prototype.amethod.call(this); // call to A's 
-    };
-    return C;
-}(B));
-new C().test1();
