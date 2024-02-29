@@ -1,4 +1,5 @@
 class Animal{
+    animalType:string
      eat():void{
         console.log("Animals Eat");
     }
@@ -7,11 +8,12 @@ class Animal{
     }
 }
 class Tiger extends Animal{
+     tigerName:string
      eat():number{
         console.log("Tiger Eat other animals");
         return 0;
     }
-    private sleep(){
+     sleep(){
 
     }
     getFood(): NonvegFood {
@@ -52,3 +54,29 @@ goat.eat(); //run time polymorphism
 // if return type is primitive : then must be same in subclass o method
 // if return type is void : then allowed to change in subclass o method
 // if super class method returing object then in subclass o method, covariant is allowed
+
+
+
+let goat2:Goat;
+goat2=new Goat();
+
+let animal2:Animal;
+
+animal2=new Tiger();
+animal2.eat(); // inherited overriding method
+
+animal2=new Goat();
+animal2.eat();  // inherited overriding method
+
+
+
+callEat(goat);
+callEat(tiger);
+function callEat(ani:Animal){
+    console.log(typeof ani); 
+    if(ani instanceof Tiger)
+        console.log("Tiger came here");
+    else if(ani instanceof Goat)
+        console.log("Goat came here");
+    ani.eat();
+}
