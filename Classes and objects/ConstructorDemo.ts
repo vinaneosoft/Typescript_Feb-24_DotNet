@@ -5,7 +5,6 @@ class BankAccount{
     accountBalance: number;
     accountType:string
     constructor(){
-        // body of constr
         console.log("in constructor....");   
         this.accountBalance=0;
         this.accountNumber=0;
@@ -13,6 +12,8 @@ class BankAccount{
         this.customerId=0;
         this.customerName="ABC";
     }
+    //Multiple constructor implementations are not allowed.
+   /*  constructor(accnum:number){} */
     deposit(deptAmt:number):number{
         this.accountBalance=this.accountBalance+deptAmt; 
         return this.accountBalance;
