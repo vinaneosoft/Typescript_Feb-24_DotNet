@@ -5,7 +5,7 @@ export class NeoStudent extends Student{
 
     test(){
        console.log("test method");
-       
+       this.studId=90;
     }
 }
 
