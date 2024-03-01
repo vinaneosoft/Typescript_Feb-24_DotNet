@@ -6,3 +6,4 @@ export let companyName="neosoft";
 export class Student{
     protected studId:number
 }
+
