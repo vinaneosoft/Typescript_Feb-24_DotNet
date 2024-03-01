@@ -24,18 +24,18 @@ while(true){
 console.log("----------------");
 employeeIds.forEach((emp)=>console.log(emp))
 console.log("----------------");
- itr1=employeeIds.keys()  // set is collection of values so for set values(), and keys() wor same
+ let itr2=employeeIds.keys()  // set is collection of values so for set values(), and keys() wor same
 while(true){
-    let iterator=itr1.next();
+    let iterator=itr2.next();
     if(iterator.done==true)
         break;
     console.log(iterator.value);
 }
 
 console.log("----------------");
-let itr2=employeeIds.entries()  // set is collection of values so for keys() it will return same key and same value
+let itr3=employeeIds.entries()  // set is collection of values so for keys() it will return same key and same value
 while(true){
-    let iterator=itr2.next();
+    let iterator=itr3.next();
     if(iterator.done==true)
         break;
     console.log(iterator.value);
