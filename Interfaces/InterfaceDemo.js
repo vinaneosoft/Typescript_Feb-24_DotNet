@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var NHPStudent_1 = require("./NHPStudent");
+var NHSStudent_1 = require("./NHSStudent");
+var student;
+student = new NHPStudent_1.NHPStudent();
+student.studentId = "NHP111";
+student.studentName = "Kalpesh";
+student.showStudentDetails();
+student = new NHSStudent_1.NHSStudent();
+student.studentId = "NHS111";
+student.studentName = "Kalpana";
+student.showStudentDetails();
