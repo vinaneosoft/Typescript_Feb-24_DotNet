@@ -1,4 +1,4 @@
-interface FatherIntf{
+interface FatherIntf   {
     dream():string;
 
     setGoals():void;
@@ -11,37 +11,50 @@ interface MotherIntf{
  * either interfaces must have difft method names with signatures or
  * if method name is same thee must have same method signature
  */
-class Child1 implements FatherIntf, MotherIntf{
-    setHobbies(): void {
-        
+class Child1 implements FatherIntf, MotherIntf {
+    setHobbies(): void {    
     }
-    setGoals(): void {
-        
+    setGoals(): void {     
     }
     dream(): string {
        return "Lawyer";
     }
     /**Duplicate function implementation not allowed in typescript. */
-   
 }
 
-class Child2 implements FatherIntf, MotherIntf{
-    setGoals(): void {
+interface A{
+    demo1():void;
+}
+interface B extends A{
+    demo2():void;
+} 
+class ABC implements B{
+    demo2(): void {
+        throw new Error("Method not implemented.");
     }
-    setHobbies(): void {
+    demo1(): void {
+        throw new Error("Method not implemented.");
     }
-    dream(): string {
-       return "Doctor"
+    // 1 or 2
+}
+interface C{
+    demo1():void;
+    demo3():void;
+}
+
+interface D extends A,C{
+    demo4():void;
+}
+class PQR implements D{
+    demo4(): void {
+        throw new Error("Method not implemented.");
+    }
+    demo1(): number {
+        throw new Error("Method not implemented.");
+    }
+    demo3(): void {
+        throw new Error("Method not implemented.");
     }
 
 }
-class Child3 implements FatherIntf, MotherIntf{
-    setGoals(): void {
-    }
-    setHobbies(): void {
-    }
-    dream(): string {
-       return "Engineer"
-    }
 
-}
